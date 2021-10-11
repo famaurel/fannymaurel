@@ -28,18 +28,20 @@
           <% else %>
             <p><%= @project.description_en %></p>
           <% end %>
-          <div class="feedback">
-            <h3><%= t('show-avis') %> <%= @project.name %></h3>
-            <% @project.feedbacks.each do |feedback| %>
-              <p><%= feedback.author %> <%= t('show-dit') %>:
-                <% if I18n.locale == :fr %>
-                  “<%= feedback.content %>”
-                <% else %>
-                  <%= feedback.content_en %>” (translated from French)
-                <% end %>
+          <% if @project.feedbacks.present? %>
+            <div class="feedback">
+              <h3><%= t('show-avis') %> <%= @project.name %></h3>
+              <% @project.feedbacks.each do |feedback| %>
+                <p><%= feedback.author %> <%= t('show-dit') %>:
+                  <% if I18n.locale == :fr %>
+                    “<%= feedback.content %>”
+                  <% else %>
+                    <%= feedback.content_en %>” (translated from French)
+                  <% end %>
                 </p><br>
-            <% end %>
-          </div>
+              <% end %>
+            </div>
+          <% end %>
         <% end %>
 
         <% if @project.design? %>
