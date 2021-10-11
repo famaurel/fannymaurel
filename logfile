@@ -5,3 +5,6 @@
 2021-10-11 10:30:31.042 CEST [28627] LOG:  database system was shut down at 2021-10-11 10:30:25 CEST
 2021-10-11 10:30:31.046 CEST [28626] LOG:  database system is ready to accept connections
 2021-10-11 10:30:43.313 CEST [28658] FATAL:  database "example_development" does not exist
+2021-10-11 11:18:52.614 CEST [30786] ERROR:  null value in column "name" of relation "users" violates not-null constraint
+2021-10-11 11:18:52.614 CEST [30786] DETAIL:  Failing row contains (1, null, contact@fannymaurel.com, $2a$12$iE5UKzWb/wnkhG3lk9Cjnei.mgbodii9D2xt23BaQGTYNP0kakbPu, t, f, null, null, null, 2021-10-11 09:18:52.607021, 2021-10-11 09:18:52.607021).
+2021-10-11 11:18:52.614 CEST [30786] STATEMENT:  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"

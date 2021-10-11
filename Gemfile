@@ -25,6 +25,17 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'devise'
+
+gem 'rails_admin', '~> 2.2.1'
+
+gem 'cancancan'
+
+gem 'rails-i18n'
+
+gem 'coffee-rails', '~> 4.2'
+
+gem "recaptcha"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
