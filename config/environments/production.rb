@@ -75,11 +75,11 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'fannymaurel.com',
-    user_name:            Rails.application.credentials.config[:gmail][:username],
-    password:             Rails.application.credentials.config[:gmail][:password],
+    user_name:            Rails.application.credentials.config[:gmail_username],
+    password:             Rails.application.credentials.config[:gmail_password],
     authentication:       'plain',
     enable_starttls_auto: true }
-    
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
