@@ -1,0 +1,42 @@
+<div class="container", id="portfolio">
+  <script>
+    $(document).ready(function(){
+      setTimeout(function(){
+         document.getElementById('button-move').style.right = '0px';
+         // new left position is 1000px in this example
+      }, 200); // 2000 = 2 seconds after page load
+    });
+  </script>
+
+
+  <div class="travaux">
+    <h1><%= t('work') %></h1>
+
+    <div class="cards">
+      <% Project.all.with_attached_images.each do |project| %>
+        <a href=<%= project_path(project) %> >
+          <% if project.website? %>
+            <div class="project-card project-card-pink">
+              <div class="card-top card-top-pink">
+          <% else %>
+            <div class="project-card project-card-grey">
+              <div class="card-top card-top-grey">
+          <% end %>
+                <div class="card-text">
+                  <p class="p-nom"><%= project.name %></p>
+                  <% if I18n.locale == :fr %>
+                    <p class="p-description"><%= project.subname %></p>
+                  <% else %>
+                    <p class="p-description"><%= project.subname_en %></p>
+                  <% end %>
+                </div>
+            </div>
+            <div class="card-bottom">
+              <%= image_tag project.images.first, class: "img-bottom", alt: "Page d'accueil du site lulubio.fr" %>
+            </div>
+          </div>
+        </a>
+      <% end %>
+    </div>
+  </div>
+</div>

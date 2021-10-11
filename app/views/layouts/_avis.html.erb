@@ -1,0 +1,34 @@
+<div class="container" id="avis">
+  <script>
+    $(document).ready(function(){
+      setTimeout(function(){
+         document.getElementById('button-move').style.right = '0px';
+         // new left position is 1000px in this example
+      }, 200); // 2000 = 2 seconds after page load
+    });
+  </script>
+
+  <h1><%= t('avis') %></h1>
+
+  <div class="cards">
+    <% Feedback.all.each do |feedback| %>
+      <div class="avis-card">
+        <div class="card-top">
+          <div class="card-prenom">
+            <p><%= feedback.author %> <%= t('de') %> <%= feedback.project.name %></p>
+          </div>
+          <div class="card-plateforme">
+            <p><%= link_to feedback.source, feedback.source_url, target: :_blank  %></p>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <% if I18n.locale == :fr %>
+            <p>"<%= feedback.content %>"</p>
+          <% else %>
+            <p>"<%= feedback.content_en %>" (translated from French)</p>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

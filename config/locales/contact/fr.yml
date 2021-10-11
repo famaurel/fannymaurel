@@ -1,0 +1,12 @@
+fr:
+  contact: "Me contacter"
+  contact-texte: |
+    Pour une question, un devis, connaître mes tarifs ou commencer à discuter
+    d’un projet, vous pouvez me contacter par mail à l’adresse
+    <a href=mailto:contact@fannymaurel.com>contact@fannymaurel.com</a>,
+    ou remplir ce formulaire. <br/>
+    Je vous répondrai dans les plus brefs délais.
+  form-nom: "Votre nom"
+  form-email: "Votre email"
+  form-message: "Votre message"
+  form-envoyer: "Envoyer"

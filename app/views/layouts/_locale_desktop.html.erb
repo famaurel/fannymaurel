@@ -1,0 +1,29 @@
+<div class="locale-desktop">
+  <% if I18n.locale == :fr %>
+    <% if current_page?("/") || current_page?("/fr") %>
+      <div class="btn-ghost" id="button-move"><%= link_to 'English', root_path(locale: :en) %></div>
+      <% elsif current_page?("/fr/presentation") %>
+        <div class="btn-ghost" id="button-move"><%= link_to 'English', presentation_path(locale: :en) %></div>
+      <% elsif current_page?("/fr/contact") %>
+        <div class="btn-ghost" id="button-move"><%= link_to 'English', contact_path(locale: :en) %></div>
+      <% elsif current_page?("/fr/avis") %>
+        <div class="btn-ghost" id="button-move"><%= link_to 'English', avis_path(locale: :en) %></div>
+      <% elsif current_page?("/fr/mentions") %>
+        <div class="btn-ghost" id="button-move"><%= link_to 'English', mentions_path(locale: :en) %></div>
+    <% end %>
+  <% else %>
+    <% if I18n.locale == :en %>
+      <% if current_page?("/") || current_page?("/en") %>
+      <div class="btn-ghost" id="button-move"><%= link_to 'Français', root_path(locale: :fr) %></div>
+      <% elsif current_page?("/en/presentation") %>
+        <div class="btn-ghost" id="button-move"><%= link_to 'Français', presentation_path(locale: :fr) %></div>
+      <% elsif current_page?("/en/contact") %>
+        <div class="btn-ghost" id="button-move"><%= link_to 'Français', contact_path(locale: :fr) %></div>
+      <% elsif current_page?("/en/avis") %>
+        <div class="btn-ghost" id="button-move"><%= link_to 'Français', avis_path(locale: :fr) %></div>
+      <% elsif current_page?("/en/mentions") %>
+        <div class="btn-ghost" id="button-move"><%= link_to 'Français', mentions_path(locale: :fr) %></div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

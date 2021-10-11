@@ -1,0 +1,64 @@
+<%= render 'layouts/navbar' %>
+<%= render 'layouts/navbar_mobile_show' %>
+
+<div class="container-full container-full-pink container-full-show">
+  <div class="container-title">
+    <h1><%= @project.name %></h1>
+    <% if I18n.locale == :fr %>
+      <h2><%= @project.subname %></h2>
+    <% else %>
+      <h2><%= @project.subname_en %></h2>
+    <% end %>
+  </div>
+
+  <div class="container-show">
+    <div class="show-left">
+      <%= image_tag @project.images.first %>
+      <% @project.images.where.not(id: @project.images.first.id).each do |image| %>
+        <%= image_tag url_for(image) %>
+      <% end %>
+    </div>
+
+    <div class="show-right">
+      <div class="project">
+        <% if @project.website? %>
+          <h3><%= t('show-projet') %></h3>
+          <% if I18n.locale == :fr %>
+            <p><%= @project.description  %></p>
+          <% else %>
+            <p><%= @project.description_en %></p>
+          <% end %>
+          <div class="feedback">
+            <h3><%= t('show-avis') %> <%= @project.name %></h3>
+            <% @project.feedbacks.each do |feedback| %>
+              <p><%= feedback.author %> <%= t('show-dit') %>:
+                <% if I18n.locale == :fr %>
+                  “<%= feedback.content %>”
+                <% else %>
+                  <%= feedback.content_en %>” (translated from French)
+                <% end %>
+                </p><br>
+            <% end %>
+          </div>
+        <% end %>
+
+        <% if @project.design? %>
+          <% if I18n.locale == :fr %>
+            <p>Je ne suis pas designer. Je crée ces pages pour m'amuser,
+              dans l'espoir que quelqu'un veuille s'en servir pour son projet.</p>
+          <% else %>
+            <p>I am not a designer. I create these for fun, in the hopes that
+            someone might like them and want to use them for their project.</p>
+          <% end %>
+        <% end %>
+
+        <div class="show-buttons">
+          <div class="feedback-btn feedback-btn-back"><%= link_to t('show-retour'), root_path(:anchor => 'portfolio') %></div>
+          <% if @project.url.present? %>
+            <div class="feedback-btn"><%= link_to t('show-voir'), @project.url, target: :_blank  %></div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

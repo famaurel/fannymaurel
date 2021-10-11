@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="footer">
+
+      <div class="footer-copyright">
+        <p>Copyright © 2019 - <span id="year"><%= Date.today.year %></span> Fanny Maurel - <%= t('droits') %></p>
+        <a href="<%= mentions_path %>"><p><%= t('mentions') %></p></a>
+      </div>
+
+      <div class="footer-links">
+        <a target='_blank' href="https://www.instagram.com/fanny_maurel/"><i class="fab fa-instagram"></i></a>
+        <a target='_blank' href="https://g.page/r/CSkOMUKfMfdCEAE?gm"><i class="fab fa-google"></i></a>
+        <a target='_blank' href="https://www.malt.fr/profile/fannymaurel"><i><%= image_tag "malt-logo.svg" %></i></a>
+        <a target='_blank' href="https://www.linkedin.com/in/fanny-maurel-866ba4104/"><i class="fab fa-linkedin-in"></i></a>
+        <a target='_blank' href="https://github.com/famaurel"><i class="fab fa-github"></i></a>
+      </div>
+
+    </div>
+  </body>
+</html>

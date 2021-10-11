@@ -1,0 +1,11 @@
+en:
+  contact: "Get in touch"
+  contact-texte: |
+    If you want to work with me or if you have any questions, you can email me at
+    <a href=mailto:contact@fannymaurel.com>contact@fannymaurel.com</a>,
+    or through this contact form. <br/>
+    I will get back to you as soon as possible.
+  form-nom: "Your name"
+  form-email: "Your email"
+  form-message: "Your message"
+  form-envoyer: "Send"

@@ -1,0 +1,7 @@
+<div class="locale-mobile">
+  <% if I18n.locale == :fr %>
+    <div class="btn-ghost"><%= link_to 'English', root_path(locale: :en) %></div>
+  <% else %>
+    <div class="btn-ghost"> <%= link_to 'Français', root_path(locale: :fr) %></div>
+  <% end %>
+</div>

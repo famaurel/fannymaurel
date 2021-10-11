@@ -1,0 +1,64 @@
+<div class="container-full container-full-pink" id="contact">
+  <script>
+    $(document).ready(function(){
+      setTimeout(function(){
+         document.getElementById('button-move').style.right = '0px';
+         // new left position is 1000px in this example
+      }, 200); // 2000 = 2 seconds after page load
+    });
+  </script>
+
+  <div class="contact-container">
+    <% flash.each do |type, msg| %>
+      <div class="alert alert-info">
+        <%= msg %>
+      </div>
+    <% end %>
+
+    <h1><%= t('contact') %></h1>
+    <div class="contact">
+      <div class="contact-left">
+        <div class="contact-photo">
+          <%= image_tag "photo_ordinateur" %>
+        </div>
+        <div class="contact-texte">
+          <p><%= raw(t('contact-texte')) %></p>
+        </div>
+      </div>
+      <div class="contact-right">
+        <% if @message.errors.any? %>
+
+          <script>
+            // console.log("error")
+            var element_to_scroll_to = document.getElementById('contact');
+            element_to_scroll_to.scrollIntoView();
+          </script>
+
+          <div id="error_explanation">
+            <h3><%= pluralize(@message.errors.count, t('erreur')) %> <%= t('interdit') %></h3>
+
+            <ul>
+              <% @message.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <%= form_with model: @message do |form| %>
+
+          <%= form.text_field :name, placeholder: "Votre nom"%>
+
+          <%= form.text_field :email, placeholder: "Votre email" %>
+
+          <%= form.text_area :content, placeholder: "Votre message", class: "message-input" %>
+
+          <%= recaptcha_tags %>
+
+          <%= form.submit t('form-envoyer') %>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div id="cookies-bar" class="cookies-bar">
+  <p class="tech">
+    <%= t("cookies")  %>
+  </p>
+  <div class="center">
+    <% if I18n.locale == :fr %>
+      <%= link_to 'Accepter', request.original_url, class: 'btn accept' %>
+      <%= link_to 'Refuser', request.original_url, class: 'btn reject' %>
+    <% else %>
+    <%= link_to 'Accept', request.original_url, class: 'btn accept' %>
+    <%= link_to 'Refuse', request.original_url, class: 'btn reject' %>
+      <% end %>
+    <div class="btn btn-popup popup" onclick="myFunction()"><%= t("plus") %>
+      <span class="popuptext" id="myPopup"> <%= t("cookies-popup") %></span>
+    </div>
+  </div>
+</div>

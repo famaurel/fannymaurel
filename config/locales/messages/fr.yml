@@ -1,0 +1,3 @@
+fr:
+  message_success: "Votre message a bien été envoyé !"
+  message_error: "Erreur : votre message n'a pas été envoyé. Veuillez réessayer plus tard ou m'envoyer un mail à l'adresse contact@fannymaurel.com."

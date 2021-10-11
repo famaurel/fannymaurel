@@ -1,0 +1,16 @@
+fr:
+  mentions: "Mentions légales"
+  mentions-texte: |
+    Développeur<br />
+    Micro-entreprise Fanny Maurel<br />
+    8 rue de l'Epargne, 40100 Dax<br />
+    06 79 48 03 69<br />
+    contact@fannymaurel.com<br />
+    N° SIRET 813 189 065 000 36<br /><br />
+    Hébergeur<br />
+    Heroku<br />
+    50 Fremont St.<br />
+    Suite 300<br />
+    San Francisco, CA<br />
+    94105<br />
+  mentions-back: "Retour à l'accueil"

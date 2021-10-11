@@ -1,0 +1,10 @@
+<div class="navbar">
+  <div class="navbar-links">
+    <a href="<%= root_path(:anchor => 'portfolio') %>" ><p>Portfolio</p></a>
+    <a href="<%= root_path(:anchor => 'presentation') %>" ><p><%= t('navbar-presentation') %></p></a>
+    <a href="<%= root_path(:anchor => 'avis') %>" ><p><%= t('navbar-avis') %></p></a>
+    <a href="<%= root_path(:anchor => 'contact') %>" class="navbar-btn" ><p>Contact</p></a>
+    <div class="navbar-line"></div>
+  </div>
+  <%= render 'layouts/locale_desktop' %>
+</div>

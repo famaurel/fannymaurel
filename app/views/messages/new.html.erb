@@ -1,0 +1,31 @@
+<script>
+  $(document).ready(function(){
+    var lang = navigator.language;
+    // var page = window.location.href.split("/").slice(0)[0];
+    var page = window.location.href.split("/").slice(0)[3];
+    // console.log(lang);
+    // console.log(page);
+    // console.log(page2);
+    if (lang == "fr-FR" || page == "fr") {
+      // console.log("français");
+      document.getElementById("html-title").innerHTML = "Fanny Maurel - Développement web";
+    } else {
+      // console.log("anglais");
+      document.getElementById("html-title").innerHTML = "Fanny Maurel - Web development";
+    }
+  });
+</script>
+
+<%= render 'layouts/banner' %>
+<%= render 'layouts/navbar' %>
+<%= render 'layouts/navbar_mobile' %>
+
+<a href="#banner">
+  <div id='top' class="top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+</a>
+<%= render 'layouts/portfolio' %>
+<%= render 'layouts/presentation' %>
+<%= render 'layouts/avis' %>
+<%= render 'layouts/contact' %>

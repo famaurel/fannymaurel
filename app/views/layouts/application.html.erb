@@ -1,18 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
-    <title>Example</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag "favicon.png" %>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="robots" content="all" />
+    <meta name="author" content="Fanny Maurel">
+
+    <!-- HTML Meta Tags -->
+    <title id="html-title"></title>
+    <meta name="description" content="Mon portfolio : un aperçu de mon travail. Vous y trouverez mes projets terminés, ainsi que mes designs">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content=" Fanny Maurel - Développement web ">
+    <meta itemprop="description" content="Mon portfolio : un aperçu de mon travail. Vous y trouverez mes projets terminés, ainsi que mes designs">
+    <meta itemprop="image" content="https://ibb.co/jD9C1z7">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://fannymaurel.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=" Fanny Maurel - Développement web ">
+    <meta property="og:description" content="Mon portfolio : un aperçu de mon travail. Vous y trouverez mes projets terminés, ainsi que mes designs">
+    <meta property="og:image" content="https://ibb.co/jD9C1z7">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content=" Fanny Maurel - Développement web ">
+    <meta name="twitter:description" content="Mon portfolio : un aperçu de mon travail. Vous y trouverez mes projets terminés, ainsi que mes designs">
+    <meta name="twitter:image" content="https://ibb.co/jD9C1z7">
+
+    <!-- Meta Tags Generated via http://heymeta.com -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script  src="https://kit.fontawesome.com/9030aff88b.js" crossorigin="anonymous" defer</script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" defer></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', type: 'module', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <link rel='canonical' href='https://fannymaurel.com' />
+
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+  <body onload="button()">
+
+    <script>
+      window.onload = (function(){
+        // console.log(navigator.language)
+        var lang = navigator.language;
+        if (lang == "fr-FR") {
+            document.getElementById("html-title").innerHTML = "Fanny Maurel - Développement web";
+          } else {
+            document.getElementById("html-title").innerHTML = "Fanny Maurel - Web development";
+          }
+        });
+    </script>
+    <script>
+      $(document).ready(function() {
+        // console.log("doc is ready");
+      });
+
+      function button(){
+        setTimeout(function(){
+           document.getElementById('button-move').style.right = '0px';
+           // new left position is 1000px in this example
+        }, 200); // 2000 = 2 seconds after page load
+      };
+
+      $(document).ready(function(){
+        $window = $(window);
+        $(window).scroll(function(){
+
+        if($window.scrollTop() > 700) {
+          $("#top").removeClass('top');
+          $("#top").addClass('top-visible');
+        } else {
+          $("#top").removeClass('top-visible');
+          $("#top").addClass('top');
+        }
+        });
+      });
+
+</script>
+
+    <div class="content-wrap">
+      <%= yield %>
+    </div>
+
+    <%= render 'layouts/footer' %>
   </body>
 </html>
