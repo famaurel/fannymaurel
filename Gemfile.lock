@@ -215,6 +215,7 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rexml (3.2.4)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -289,6 +290,7 @@ DEPENDENCIES
   rails-i18n
   rails_admin (~> 2.2.1)
   recaptcha
+  rexml
   sass-rails (>= 6)
   selenium-webdriver
   spring

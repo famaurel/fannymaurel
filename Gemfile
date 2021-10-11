@@ -36,6 +36,9 @@ gem 'rails-i18n'
 gem 'coffee-rails', '~> 4.2'
 
 gem "recaptcha"
+
+gem 'rexml'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
