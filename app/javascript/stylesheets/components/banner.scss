@@ -13,11 +13,11 @@
   width: 100%;
   height: 20%;
   background-color: rgba(108, 100, 96, 0.6);
-  display:flex;
+  display: -webkit-flex;
   align-items: center;
   position: relative;
   text-align: left;
-  justify-content: right;
+  -webkit-justify-content: flex-end;
   h1 {
     width: 75%;
     font-family: "Roboto", sans-serif;
@@ -31,10 +31,10 @@
   width: 100%;
   height: 15%;
   background-color: rgba(224, 175, 160, 0.6);
-  display:flex;
+  display: -webkit-flex;
   align-items: center;
   text-align: left;
-  justify-content: right;
+  -webkit-justify-content: flex-end;
   h1 {
     width: 75%;
     color: rgba(58, 51, 53, 0.65);
@@ -47,10 +47,10 @@
   width: 100%;
   height: 30%;
   background-color: white;
-  display: flex;
+  display: -webkit-flex;
   align-items: top;
   text-align: left;
-  justify-content: right;
+  -webkit-justify-content: flex-end;
   p {
     font-family: "Poiret One", cursive;
     font-size: 19px;
