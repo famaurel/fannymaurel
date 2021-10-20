@@ -1,16 +1,11 @@
 <div class="banner" id="banner">
 
-  <div class="banner-img">
-    <%= image_tag "photoFM.webp" %>
-  </div>
+  <% if I18n.locale == :fr %>
+    <%= image_tag "logo_grand_fr.png" %>
+  <% else %>
+    <%= image_tag "logo_grand_en.png" %>
+  <% end %>
 
-  <div class="line-1"></div>
-  <div class="line-2"><h1>FANNY MAUREL</h1></div>
-
-  <div class="line-3"><h1><%= t('site-name') %></h1></div>
-
-  <div class="line-4"><p><%= t('site-pitch') %></p>
-    <%= render 'layouts/locale_mobile' %>
-  </div>
+  <%= render 'layouts/locale_mobile' %>
 
 </div>
