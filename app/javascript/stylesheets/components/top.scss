@@ -28,11 +28,21 @@
 
 @media screen and (max-width: 823px) and (orientation: landscape) {
   .top-visible {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+    top: 86%;
+    left: 93%;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .top-visible {
+    margin-bottom: 35px;
+    top: 86%;
+    left: 91%;
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: portrait) {
   .top-visible {
     height: 40px;
     width: 40px;
@@ -41,6 +51,18 @@
     top: 94%;
     left: 92%;
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .top-visible {
+    left: 93%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .top-visible {
+    left: 90%;
   }
 }
 
