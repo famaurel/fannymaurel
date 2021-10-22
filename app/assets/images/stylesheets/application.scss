@@ -1,0 +1,17 @@
+@import "bootstrap/scss/bootstrap";
+@import "trix/dist/trix";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400&family=Noto+Serif&family=Roboto+Condensed:wght@300&display=swap');
+
+@import "components/article";
+@import "components/banner";
+@import "components/body";
+@import "components/comments";
+@import "components/container";
+@import "components/devise";
+@import "components/errors";
+@import "components/footer";
+@import "components/form";
+@import "components/modal";
+@import "components/navbar";
+@import "components/pagination";

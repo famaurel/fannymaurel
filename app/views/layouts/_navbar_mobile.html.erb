@@ -1,16 +1,19 @@
 <div class="navbar-mobile" onclick="myFunction(this)">
+
   <div class="bar1"></div>
   <div class="bar2"></div>
   <div class="bar3"></div>
 
-<ul>
-  <li> <a href="<%= root_path(:anchor => 'portfolio') %>" ><p>Portfolio</p></a> </li>
-  <li> <a href="<%= root_path(:anchor => 'presentation') %>" ><p><%= t('navbar-presentation') %></p></a> </li>
-  <li> <a href="<%= root_path(:anchor => 'avis') %>" ><p><%= t('navbar-avis') %></p></a> </li>
-  <li> <a href="<%= root_path(:anchor => 'contact') %>"> <button class="navbar-mobile-btn"> Contact </button></a> </li>
-</ul>
+  <ul>
+    <li> <a href="<%= root_path(:anchor => 'portfolio') %>" ><p>Portfolio</p></a> </li>
+    <li> <a href="<%= root_path(:anchor => 'presentation') %>" ><p><%= t('navbar-presentation') %></p></a> </li>
+    <li> <a href="<%= root_path(:anchor => 'avis') %>" ><p><%= t('navbar-avis') %></p></a> </li>
+    <li> <a href="<%= root_path(:anchor => 'contact') %>"> <button class="navbar-mobile-btn"> Contact </button></a> </li>
+  </ul>
 
 </div>
+
+
 
 <script>
   function myFunction(x) {

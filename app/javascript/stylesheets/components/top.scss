@@ -26,6 +26,12 @@
   box-shadow: none;
 }
 
+@media screen and (max-width: 823px) and (orientation: landscape) {
+  .top-visible {
+    margin-bottom: 35px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .top-visible {
     height: 40px;

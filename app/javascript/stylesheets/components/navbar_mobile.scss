@@ -4,19 +4,13 @@
   margin-top: 50px;
   align-items: center;
   position: relative;
+  ul {
+    padding: 10% 20%;
+  }
   .navbar-mobile-show {
     margin-top: 20px;
   }
 }
-
-// .bar1, .bar2, .bar3 {
-//   width: 35px;
-//   height: 4px;
-//   background-color: #4C4643;
-//   opacity: 0.6;
-//   margin: 4px 0;
-//   transition: 0.5s;
-// }
 
 .bar1, .bar2, .bar3 {
   width: 30px;
@@ -31,21 +25,9 @@
   margin-bottom: 20px;
 }
 
-// .change .bar1 {
-//   -webkit-transform: rotate(-45deg) translate(-9px, 9px);
-//   transform: rotate(-45deg) translate(-9px, 9px);
-// }
-//
-// .change .bar2 {opacity: 0;}
-//
-// .change .bar3 {
-//   -webkit-transform: rotate(45deg) translate(-8px, -8px);
-//   transform: rotate(45deg) translate(-8px, -8px);
-// }
-
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 9px);
-  transform: rotate(-45deg) translate(-5px, 4px);
+  transform: rotate(-45deg) translate(-6px, 4px);
 }
 
 .change .bar2 {opacity: 0;}
@@ -78,7 +60,7 @@ ul {
 }
 
 .navbar-mobile-btn {
-  background: rgba(224, 175, 160, 0.5);
+  background: rgba(224, 175, 160, 0.2);
   border-radius: 25px;
   height: 36px;
   border: none;
@@ -98,8 +80,26 @@ ul {
   }
 }
 
+@media screen and (max-width: 540px) {
+  .navbar-mobile {
+    ul {
+      padding: 5% 15%;
+    }
+  }
+}
+
 @media screen and (max-width: 500px) {
   .navbar-mobile {
     margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 568px) and (orientation: landscape) {
+  .navbar-mobile {
+    margin-top: 30px;
+    display: flex;
+    ul {
+      padding: 5% 10%;
+    }
   }
 }

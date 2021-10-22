@@ -36,8 +36,9 @@
 
   .locale-mobile {
     position: absolute;
-    bottom: 0px;
+    top: 0px;
     right: 0px;
+    margin-top: 8px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     opacity: 0.7;

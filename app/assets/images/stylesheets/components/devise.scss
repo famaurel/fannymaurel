@@ -1,0 +1,84 @@
+.btn-devise {
+  margin: 20px 0px 10px;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 0;
+}
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  .field {
+    margin: 10px;
+    input[type = email] {
+      width: 100%;
+    }
+    input[type = password] {
+      width: 100%;
+    }
+  }
+  .checkbox-field {
+    label {
+      margin-left: 10px;
+    }
+  }
+}
+
+.edit_user {
+  margin-bottom: 50px;
+  align-items: flex-start;
+  .field {
+    margin: 20px 0;
+    width: 100%;
+  }
+  .actions {
+    margin: 20px 0;
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  input[type="email"], input[type="password"]{
+    width: 100%;
+  }
+}
+
+.delete-account {
+  margin-bottom: 30px;
+}
+
+.signup {
+  .new_user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    .field {
+      margin: 10px;
+      width: 100%;
+      input[type = text] {
+        margin: auto;
+      }
+      input[type = email] {
+        width: 100%;
+      }
+      input[type = password] {
+        width: 100%;
+      }
+    }
+    .checkbox-field {
+      label {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.password {
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

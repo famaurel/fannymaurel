@@ -28,64 +28,23 @@
 
 @media screen and (max-width: 800px) {
   .banner {
-    height: 30vh;
-  }
-  .line-2 {
-    h1 {
-      font-size: 40px;
-    }
-  }
-  .line-3 {
-    h1 {
-      font-size: 30px;
-    }
+    height: 35vh;
+    padding: 20px 0 0;
   }
 }
 
 @media screen and (max-width: 500px) {
   .banner {
-    height: auto;
-    padding-top: 15%;
-  }
-  .banner-img {
-    display: none;
-  }
-  .line-2 {
-    height: auto;
-    padding-left: 5%;
-    h1 {
-      width: 100%;
-      position: relative;
-      left: 0%;
-      margin: 0;
-    }
-  }
-  .line-3 {
-    height: auto;
-    padding-left: 5%;
-    h1 {
-      position: relative;
-      left: 0%;
-      margin: 0;
-      padding: 2px;
-      width: 100%;
-    }
-  }
-  .line-4 {
     position: relative;
-    p {
-      position: relative;
-      left: 0;
-      margin: 0;
-      width: 100%;
-      padding-left: 5%;
-    }
+    height: 300px;
+    padding: 5% 0 0;
   }
 }
 
 @media screen and (max-width: 850px) and (orientation: landscape) {
   .banner {
     height: 70vh;
+    padding: 40px 0 0;
   }
 }
 

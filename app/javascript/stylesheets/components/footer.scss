@@ -60,9 +60,35 @@
   }
 }
 
+@media screen and (max-width: 823px) and (orientation: landscape) {
+  .footer {
+    height: fit-content;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 10px 0;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .footer {
+    height: fit-content;
+    p {
+      margin: 5px 0;
+    }
+  }
+  .footer-copyright {
+    align-items: center;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .footer {
-    padding: 0px;
+    padding: 0 10px;
     justify-content: center;
     height: auto;
     position: relative;

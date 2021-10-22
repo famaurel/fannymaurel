@@ -40,6 +40,12 @@
   }
 }
 
+@media screen and (max-width: 540px) {
+  .content-wrap {
+    padding-bottom: 100px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .content-wrap {
     padding-bottom: 0px;
@@ -49,5 +55,11 @@
   }
   .container-full-pink {
     padding: 30px 0px;
+  }
+}
+
+@media screen and (max-width: 568px) and (orientation: landscape) {
+  .content-wrap {
+    padding-bottom: 100px;
   }
 }

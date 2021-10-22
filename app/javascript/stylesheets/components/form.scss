@@ -3,7 +3,7 @@ form {
   background-color: rgba(224, 175, 160, 0.8);
   color: rgba(224, 175, 160, 0.6);
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   margin: 75px 0px 75px 50px;
   padding: 30px;
   ::placeholder {
@@ -32,7 +32,7 @@ input[type=text], select {
 
 input[type=submit] {
   width: 100px;
-  height: 34px;
+  height: 40px;
   background-color: #FAF2F0;
   color: rgb(108, 100, 96);
   font-weight: 600;
@@ -41,6 +41,7 @@ input[type=submit] {
   margin-top: 25px;
   padding: 0px 12px;
   box-shadow: 0px 1px 4px rgba(108, 100, 96, 0.2);
+  opacity: 0.9;
   cursor: pointer;
   p {
     line-height: 34px;
@@ -81,7 +82,7 @@ input[type=submit]:hover {
 @media screen and (max-width: 800px) {
   form {
     margin: auto;
-    padding: 30px;
+    padding: 20px;
   }
   #error_explanation {
     margin: 0;
