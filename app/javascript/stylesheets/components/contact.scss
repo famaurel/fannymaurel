@@ -66,6 +66,17 @@
   line-height: 1.8;
 }
 
+@media screen and (max-width: 1024px) {
+  .contact-left {
+    .contact-photo {
+      display: none;
+    }
+    .contact-texte {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .contact {
     width: 85%;
