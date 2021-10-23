@@ -12,22 +12,14 @@
       opacity: 0.6;
     }
     p {
+      font-weight: 600;
       font-family: "Roboto", sans-serif;
       margin: 0px;
-      color: #2B2826;
+      color: rgba(43, 40, 38, 0.8);
       font-size: 20px;
       padding: 0px 10px;
     }
   }
-}
-
-.navbar-line {
-  height: 1px;
-  width: 100%;
-  background-color: rgba(224, 175, 160, 0.6);
-  position: absolute;
-  bottom: -12px;
-  right: -15px;
 }
 
 .navbar-btn {
