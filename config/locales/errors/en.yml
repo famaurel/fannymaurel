@@ -1,3 +1,5 @@
 en:
   erreur: "error(s)"
   interdit: "prohibited this article from being saved:"
+  404: "Error 404: page not found"
+  500: "Error 500: internal server error"

@@ -1,3 +1,5 @@
 fr:
   erreur: "erreur(s) : "
   interdit: "le message n'a pas pu être sauvegardé."
+  404: "Erreur 404 : la page que vous avez demandée n'existe pas"
+  500: "Erreur 500 : erreur du serveur"
