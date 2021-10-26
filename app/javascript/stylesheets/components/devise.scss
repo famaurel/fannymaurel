@@ -1,0 +1,15 @@
+.new_user {
+  margin: 20px;
+  label {
+    color: white;
+  }
+  input[type="submit"] {
+    width: auto;
+  }
+  input[type="email"] {
+    width: 90%;
+  }
+  input[type="password"] {
+    width: 90%;
+  }
+}
